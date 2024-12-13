@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Halaman Blog/title>
+    <title>Halaman Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
@@ -45,7 +45,7 @@
                                 <td>{{ ($dataBlogs->currentpage() - 1) * $dataBlogs->perpage() + $loop->index + 1 }}
                                 </td>
                                 <td>{{ $item->title }}</td>
-                                <td>edit | delete</td>
+                                <td><a href="{{ url('blog/'.$item->id.'/detail') }}">view</a> | <a href="{{ url('blog/'.$item->id.'/edit') }}">edit</a> | <a href="{{ url('blog/'.$item->id.'/delete') }}">delete</a></td>
                             </tr>
                         @endforeach
                         {{-- <tr>
