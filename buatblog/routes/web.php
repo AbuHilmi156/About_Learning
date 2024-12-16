@@ -2,7 +2,7 @@
 
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BlogController;
+use App\Http\Controllers\SantriController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -11,4 +11,4 @@ Route::get('/', function () {
 // Route::get('/blog', function () {
 //     return view('blog');
 // });
-Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/santri', [SantriController::class, 'index']);
